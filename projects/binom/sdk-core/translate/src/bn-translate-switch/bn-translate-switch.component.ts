@@ -5,51 +5,46 @@ import { coerceBooleanProperty,BooleanInput } from '@angular/cdk/coercion';
 import { CommonModule } from '@angular/common';
 import { MatRadioModule } from '@angular/material/radio'
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule }from '@angular/material/button';
 @Component({
   selector: 'bn-translate-switch',
   templateUrl: './bn-translate-switch.component.html',
-  imports: [CommonModule, MatRadioModule, FormsModule],
+  imports: [CommonModule, MatRadioModule, FormsModule, MatButtonModule],
   standalone: true
 })
 export class BnTranslateSwitchComponent implements OnInit, OnDestroy {
   private subscriptions: Array<Subscription> = new Array<Subscription>();
   constructor(private translate: TranslateService) { }
-  currentLanguages:any;
-
-  currentLanguage: string = 'en-US';
+  curLangs:any;
+  curLang: string = 'en-US';
   @Input() saveToLocalStorage: boolean = true;
   @Input() disabled: boolean = false;
-
   private  _enableToolTips:boolean = false;
   get enableToolTips(): boolean{ return this._enableToolTips; }
   @Input() set enableToolTips(val: BooleanInput) { this._enableToolTips = coerceBooleanProperty(val); }
-
   ngOnInit(): void {
-    this.currentLanguage = this.translate.currentLang;
-    this.currentLanguages = this.translate.getLangs();
-    this.languageName = this.currentLanguage;
+    this.curLang = this.translate.currentLang || 'en-US';
+    
+    this.curLangs = this.translate.getLangs();
+    this.langName = this.curLang;
+
+    console.log( this.curLang, this.langName )
     if(this.saveToLocalStorage){
       let lan = localStorage.getItem('language');
       if( lan !== null){
         this.translate.use(lan);
-        this.currentLanguage = lan;
-      } else {
-        this.currentLanguage = this.translate.currentLang;
-      }
+        this.curLang = lan;
+      } 
     }
-
-    let sub1 = this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      this.languageName = event.lang;
-    });
-    this.subscriptions.push(sub1)
+    this.subscriptions.push(this.translate.onLangChange.subscribe((event: LangChangeEvent) => this.langName = event.lang));
   }
 
-  languageName!: string;
+  langName!: string;
   setLanguage(): void {
-      this.translate.use(this.languageName);
-      this.currentLanguage = this.languageName;
+      this.translate.use(this.langName);
+      this.curLang = this.langName;
       if(this.saveToLocalStorage)
-        localStorage.setItem('language', this.languageName);
+        localStorage.setItem('language', this.langName);
   }
 
   ngOnDestroy(){ this.subscriptions.forEach(subscription => subscription.unsubscribe());}

@@ -34,7 +34,7 @@ export class BnLoggerService {
     switch (type) {
       case 'log': color = 'color: #008202'; break;
       case 'info': color = 'color: #6495ED'; break;
-      case 'warn': color = 'color: #FF8C00'; break;
+      case 'warn': color = 'color: #008202'; break;
       case 'debug': color = 'color: #008202'; break;
       case 'error': color = 'color: #DC143C'; break;
       default:

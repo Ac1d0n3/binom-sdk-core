@@ -1,13 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
+// {{ customText | wordcount }}
 @Pipe({
-  name: 'bnWordcount',
-  standalone: true
+  name: 'bnwordcount',
+  standalone:true
 })
 export class BnWordcountPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: any, args?: any): any {
+    return value.trim().split(/\s+/).length;
   }
 
 }

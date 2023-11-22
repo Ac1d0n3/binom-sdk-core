@@ -1,24 +1,25 @@
-# SdkCore
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+# @binom/sdk-core
+---------------------------------------------------------------------------------
+       ____   _                             _____  ____   __ __
+      / __ ) (_)____   ____   ____ ___     / ___/ / __ \ / //_/
+     / __  |/ // __ \ / __ \ / __ `__ \    \__ \ / / / // ,<   
+    / /_/ // // / / // /_/ // / / / / /   ___/ // /_/ // /| |  
+   /_____//_//_/ /_/ \____//_/ /_/ /_/   /____//_____//_/ |_| 
 
-## Code scaffolding
+   CORE V1.0.1
+   Author: Thomas Lindackers 
 
-Run `ng generate component component-name --project sdk-core` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project sdk-core`.
-> Note: Don't forget to add `--project sdk-core` or else it will be added to the default project in your `angular.json` file. 
+   BINOM.net
+                                                         
+---------------------------------------------------------------------------------
 
-## Build
+## Pipes 
 
-Run `ng build sdk-core` to build the project. The build artifacts will be stored in the `dist/` directory.
+## ngx translate helper 
 
-## Publishing
+## data-loader
 
-After building your library with `ng build sdk-core`, go to the dist folder `cd dist/sdk-core` and run `npm publish`.
+## logger 
 
-## Running unit tests
-
-Run `ng test sdk-core` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## utils

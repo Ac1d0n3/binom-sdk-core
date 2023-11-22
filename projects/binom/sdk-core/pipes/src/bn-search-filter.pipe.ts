@@ -2,12 +2,19 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'bnSearchFilter',
-  standalone: true
+  standalone:true
 })
 export class BnSearchFilterPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
-  }
+  transform(items: any[], field:string, value: string): any[] {
+
+    if(!items) return [];
+    if(!value) return items;
+
+    return items.filter( str => {
+          if(!str[field]) return false;
+          return str[field].toLowerCase().includes(value.toLowerCase());
+        });
+   }
 
 }

@@ -63,7 +63,7 @@
               "projects/test/src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "@angular/material/prebuilt-themes/purple-green.css",
               "projects/test/src/styles.scss"
             ],
             "scripts": []
@@ -124,7 +124,7 @@
               "projects/test/src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "@angular/material/prebuilt-themes/purple-green.css",
               "projects/test/src/styles.scss"
             ],
             "scripts": []

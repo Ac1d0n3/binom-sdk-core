@@ -1,0 +1,49 @@
+html, body {
+    margin: 0; 
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overscroll-behavior: none;
+    -webkit-overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+}
+
+*:not(ul):not(ol){
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None;
+}
+
+.selectable{
+    -ms-user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    user-select: text;
+}
+  
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.toolbar-spacer{
+    flex: 1 1 auto;
+}
+
+.font-fa, .bn-button-fa{
+    font-size: 17px !important;
+    width:24px;
+    line-height: 24px;
+}
+
+.bn-fa{
+    font-size: 17px !important;
+}
+
+.bn-mat-icon-fix{
+    display: inline-flex;
+    vertical-align: top;
+}

@@ -1,13 +1,14 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform, SecurityContext } from "@angular/core";
+import { DomSanitizer } from "@angular/platform-browser";
 
 @Pipe({
   name: 'bnSafeHtml',
-  standalone: true
+  standalone:true
 })
 export class BnSafeHtmlPipe implements PipeTransform {
-
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
-  }
-
+    constructor(private sanitized: DomSanitizer) {
+    }
+    transform(value: string) {
+        return this.sanitized.sanitize(SecurityContext.HTML,value);
+    }
 }
