@@ -1,0 +1,6 @@
+<div class="bn-setting-menu">
+<mat-radio-group aria-label="Select an option" (change)="setLanguage()" [(ngModel)]="languageName">
+  <mat-radio-button class="clearfix" [value]="item" *ngFor="let item of currentLanguages">{{item}}</mat-radio-button>
+
+</mat-radio-group>
+</div>

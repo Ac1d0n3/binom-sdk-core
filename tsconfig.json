@@ -2,6 +2,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@binom/sdk-core/*": [
+        "./dist/binom/sdk-core/*"
+      ],
+      "@binom/sdk-core": [
+        "./dist/binom/sdk-core"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
