@@ -1,1 +1,30 @@
-<p>date-and-number-pipe works!</p>
+<bn-translate-switch-menu></bn-translate-switch-menu>
+<br>
+<mat-form-field>
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="testdate">
+
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+<br>
+ Date: {{testdate | date: 'shortDate': '' : langcode.substring(0, 2)   }}<br><br>
+ Number: {{ testnum  |  number: '4.2':  langcode.substring(0, 2) }}
+  <pre>
+    <code>
+        testdate | date: 'shortDate': '' : langcode.substring(0, 2)
+    </code>
+  </pre>
+
+  <pre>
+    <code>
+        import registerLocaleData from '&#64;angular/common';
+        import localeEn from '&#64;angular/common/locales/en';
+        import localeDe from '&#64;angular/common/locales/de';
+        import localeDeExtra from '&#64;angular/common/locales/extra/de';
+        registerLocaleData(localeEn, 'en');
+        registerLocaleData(localeEn, 'en');
+        registerLocaleData(localeDe, 'de', localeDeExtra);
+    </code>
+  </pre>
+

@@ -1,1 +1,12 @@
-<p>wordcount works!</p>
+<h2>Wordcount Test</h2>
+    
+<mat-form-field color="accent" class="example-form-field">
+  <mat-label>Type something...</mat-label>
+  <textarea matInput [(ngModel)]="inputValue"></textarea>
+</mat-form-field>
+
+<div>Word count: {{ inputValue | bnwordcount }}</div>
+
+<pre>
+    <code>inputValue | bnwordcount </code>
+</pre>

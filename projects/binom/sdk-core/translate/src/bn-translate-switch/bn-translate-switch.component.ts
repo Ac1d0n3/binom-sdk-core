@@ -23,19 +23,19 @@ export class BnTranslateSwitchComponent implements OnInit, OnDestroy {
   get enableToolTips(): boolean{ return this._enableToolTips; }
   @Input() set enableToolTips(val: BooleanInput) { this._enableToolTips = coerceBooleanProperty(val); }
   ngOnInit(): void {
-    this.curLang = this.translate.currentLang || 'en-US';
+   
     
     this.curLangs = this.translate.getLangs();
     this.langName = this.curLang;
 
-    console.log( this.curLang, this.langName )
+
     if(this.saveToLocalStorage){
       let lan = localStorage.getItem('language');
       if( lan !== null){
         this.translate.use(lan);
         this.curLang = lan;
       } 
-    }
+    } else  this.curLang = this.translate.currentLang || 'en-US';
     this.subscriptions.push(this.translate.onLangChange.subscribe((event: LangChangeEvent) => this.langName = event.lang));
   }
 

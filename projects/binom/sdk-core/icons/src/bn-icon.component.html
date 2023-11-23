@@ -1,0 +1,2 @@
+<i *ngIf="type!=='mat'" [class]="type +' '+ icon +' fa-fw '+ (setClass !=='' ? setClass : 'bn-button-fa')"></i>
+<span *ngIf="type==='mat'" [class]="'material-icons-'+art +' '+setClass">{{icon}}</span>

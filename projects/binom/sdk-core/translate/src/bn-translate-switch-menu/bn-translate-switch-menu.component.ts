@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy} from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, ChangeDetectionStrategy} from '@angular/core';
 import { TranslateService,LangChangeEvent, TranslateModule } from '@ngx-translate/core';
 import { Subscription } from "rxjs";
 import { coerceBooleanProperty,BooleanInput } from '@angular/cdk/coercion';
@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './bn-translate-switch-menu.component.html',
   standalone:true,
   imports: [CommonModule, MatMenuModule, FormsModule, BnTranslateSwitchComponent,MatTooltipModule, TranslateModule, MatButtonModule],
+  changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class BnTranslateSwitchMenuComponent implements OnInit,OnDestroy {
   private subscriptions: Array<Subscription> = new Array<Subscription>();

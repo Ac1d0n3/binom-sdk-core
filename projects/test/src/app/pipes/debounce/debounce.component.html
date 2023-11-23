@@ -1,1 +1,22 @@
-<p>debounce works!</p>
+
+
+<div>
+    <h2>Debounce Test</h2>
+    <mat-form-field color="accent" class="example-form-field">
+        <mat-label>Type something...</mat-label>
+    
+        <input matInput [(ngModel)]="inputValue">
+    </mat-form-field>
+    <p>Debounced Value: {{ inputValue | bnDebounce:500 }}</p>
+
+    <pre>
+        <code>
+            <p>Debounced Value: inputValue | bnDebounce:500 </p>
+        </code>
+    </pre>
+</div>
+
+
+  
+  
+ 

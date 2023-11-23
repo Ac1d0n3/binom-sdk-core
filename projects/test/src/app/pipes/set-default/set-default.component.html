@@ -1,1 +1,14 @@
-<p>set-default works!</p>
+
+  
+
+<h2>set-default Test</h2>
+<mat-form-field color="accent" class="example-form-field">
+<mat-label>Type something...</mat-label>
+<textarea matInput [(ngModel)]="inputValue"></textarea>
+</mat-form-field>
+<div>{{ inputValue| bnSetDefault:'default-value' }}</div>
+<pre>
+    <code><p>
+        inputValue| bnSetDefault:'default-value' 
+    </p></code>
+</pre>

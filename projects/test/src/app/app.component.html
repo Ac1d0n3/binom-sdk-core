@@ -1,5 +1,5 @@
 <mat-toolbar>
-  <button type="button" class="bn-button-fa" mat-icon-button (click)="drawer.toggle()">
+  <button type="button" class="bn-button-fa"  mat-icon-button (click)="drawer.toggle()">
     <i class="fas fa-bars"></i>
   </button>
   <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 230 63" style="height: 40px; margin-left:10px">
@@ -12,32 +12,36 @@
 
     <span style="margin-left: 10px;"></span> 
     <span class="toolbar-spacer"></span> 
-    <bn-translate-switch-menu></bn-translate-switch-menu>
-    <span style="font-size: 14px;"><i class="fas fa-at"></i>binom/sdk-core 1.0.1 </span>
+   
+    <span style="font-size: 14px;font-weight: 100;"><i class="fas fa-at"></i>binom/sdk-core 1.0.1 </span>
 
 
 </mat-toolbar>
 
 
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side" >
-    <button mat-button style="width:100%;text-align: left !important;">Home</button>
+<mat-drawer-container class="example-container" autosize >
+  <mat-drawer #drawer class="example-sidenav" mode="side" [opened]="true" >
+    <button type="button"  mat-button style="width:100%;justify-content: flex-start;" [routerLink]="['./home']">Home</button>
     
     <mat-accordion>
 
-      
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Pipes
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>
-          <button type="button" mat-button>
-            
-          </button>
-        </p>
-      </mat-expansion-panel>
+      @for (item of data; track $index) {
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+             {{item.title}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div style="display: grid;grid-template-columns: auto;">
+            @for (subitem of item.data; track $index) {
+            <button style="justify-content: flex-start;"  type="button" mat-button [routerLink]="['./'+item.title+'/'+subitem]">
+              {{subitem}}
+            </button>
+            }
+          </div>
+        </mat-expansion-panel>
+      }
+     
      
       
 

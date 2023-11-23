@@ -1,1 +1,15 @@
-<p>sort-by works!</p>
+<h2>Sort By Test</h2>
+    
+    <label for="orderSelect">Select Order:</label>
+    <select id="orderSelect" [(ngModel)]="selectedOrder">
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+    
+    <ul>
+      <li *ngFor="let item of items | bnSortBy:'name':(selectedOrder === 'desc')">{{ item.name }}</li>
+    </ul>
+
+    <pre>
+        <code><p>let item of items | bnSortBy:'name':(selectedOrder === 'desc') </p></code>
+    </pre>
