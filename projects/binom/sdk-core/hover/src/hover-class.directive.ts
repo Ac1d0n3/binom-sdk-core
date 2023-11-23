@@ -1,9 +1,10 @@
 import { Directive, HostListener, ElementRef, Input,OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[bnHoverClass]'
+  selector: '[bnHoverClass]',
+  standalone: true
 })
-export class HoverClassDirective implements OnInit {
+export class BnHoverClassDirective implements OnInit {
 
   constructor(public elementRef:ElementRef) {}
 

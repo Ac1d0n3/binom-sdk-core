@@ -1,9 +1,12 @@
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
+import { CommonModule } from '@angular/common';
 import { Component,HostBinding, Input } from '@angular/core';
 
 @Component({
   selector: 'bn-icon',
-  templateUrl: './bn-icon.component.html'
+  templateUrl: './bn-icon.component.html',
+  imports:[CommonModule],
+  standalone:true
 })
 export class BnIconComponent {
 

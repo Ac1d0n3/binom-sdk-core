@@ -1,4 +1,4 @@
-<bn-translate-switch-menu></bn-translate-switch-menu>
+Change lang to see effect:<bn-translate-switch-menu></bn-translate-switch-menu>
 <br>
 <mat-form-field>
     <mat-label>Choose a date</mat-label>
@@ -16,6 +16,7 @@
     </code>
   </pre>
 
+  <h2>Need to be done on Appstart</h2>
   <pre>
     <code>
         import registerLocaleData from '&#64;angular/common';
@@ -28,3 +29,9 @@
     </code>
   </pre>
 
+  <h2>Need to be done on langchange</h2>
+<pre>
+    <code>
+        this.adapter.setLocale(this.langcode.substring(0, 2))
+    </code>
+</pre>

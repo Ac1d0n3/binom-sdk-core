@@ -79,17 +79,14 @@ export const routes: Routes = [
     },
     {
         path: 'icons/bn-icon',
-        loadComponent:  () => import('./bn-icon/bn-icon.component').then(m => m.BnIconComponent)
+        loadComponent:  () => import('./bn-icon/bn-icon.component').then(m => m.IconComponent)
     },
     
     {
         path: 'selection/selection-and-caret-svc',
         loadComponent:  () => import('./selection/selection-and-caret-svc/selection-and-caret-svc.component').then(m => m.SelectionAndCaretSvcComponent)
     },
-    {
-        path: 'selection/copy-to-clipboard-svc',
-        loadComponent:  () => import('./selection/copy-to-clipboard-svc/copy-to-clipboard-svc.component').then(m => m.CopyToClipboardSvcComponent)
-    },
+   
     {
         path: 'screen/fullscreen',
         loadComponent:  () => import('./screen/full-screen/full-screen.component').then(m => m.FullScreenComponent)
@@ -102,7 +99,35 @@ export const routes: Routes = [
         path: 'hover/hover-class',
         loadComponent:  () => import('./hover/hover-class/hover-class.component').then(m => m.HoverClassComponent)
     },
-    
+
+    {
+        path: 'interfaces/bn-error',
+        loadComponent:  () => import('./interfaces/bn-error/bn-error.component').then(m => m.BnErrorComponent)
+    },
+
+    {
+        path: 'interfaces/bn-el-size',
+        loadComponent:  () => import('./interfaces/bn-el-size/bn-el-size.component').then(m => m.BnElSizeComponent)
+    },
+
+    {
+        path: 'interfaces/bn-key-value',
+        loadComponent:  () => import('./interfaces/bn-key-value/bn-key-value.component').then(m => m.BnKeyValueComponent)
+    },
+
+    {
+        path: 'interfaces/bn-label-value',
+        loadComponent:  () => import('./interfaces/bn-label-value/bn-label-value.component').then(m => m.BnLabelValueComponent)
+    },
+
+    {
+        path: 'router/router-and-title-svc',
+        loadComponent:  () => import('./router/router-and-title-svc/router-and-title-svc.component').then(m => m.RouterAndTitleSvcComponent)
+    },
+    {
+        path: 'router/router-reuse',
+        loadComponent:  () => import('./router/router-reuse-svc/router-reuse-svc.component').then(m => m.RouterReuseSvcComponent)
+    },
   ];
   
  

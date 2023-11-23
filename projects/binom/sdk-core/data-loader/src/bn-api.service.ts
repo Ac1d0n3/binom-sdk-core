@@ -15,10 +15,15 @@ export class BnApiService {
   constructor(
     private http: HttpClient,
     private logger:BnLoggerService
-  ) { }
+  ) {
+      const baseUrl = window.location.origin;
+      window.location.hostname === 'localhost' ? this.apiUrl = 'http://localhost:8000/api/' :  this.apiUrl = `${baseUrl}/api/`;
+   }
 
   setApiUrl(url:string){ this.apiUrl = url; }
   setPhpPostMode(onOff:boolean){ this.phpPostMode = onOff; }
+
+  getApiUrl() {return this.apiUrl }
 
   private formatErrors(error: any) { return  throwError(() => error.error);}
 

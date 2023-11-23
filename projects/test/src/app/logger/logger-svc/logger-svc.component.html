@@ -1,1 +1,23 @@
-<p>logger-svc works!</p>
+<h1>BnLoggerService</h1>
+<h2>should be run in root</h2>
+
+<br><br>
+<h2>Methods</h2>
+doLog(logSource:BnLogSource, type:  'log' | 'info'  | 'warn' | 'debug' | 'error' = 'log' )<br>
+formatMsg(msg:BnLogMsg, logSource:BnLogSource, type:  'log' | 'info'  | 'warn' | 'debug' | 'error' = 'log'  )<br>
+<br>
+<h2>Interfaces:</h2>
+BnLogSource
+<ul>
+    <li>module:string;</li>
+    <li>source:string;</li>
+</ul>
+BnLogSource
+<ul>
+    <li>function:string;</li>
+    <li>msg:string;</li>
+    <li>info?:any;</li>
+</ul>
+
+    
+    

@@ -1,1 +1,14 @@
-<p>full-screen works!</p>
+<div  fullscreen #fullscreen="fullscreen" style="border:1px solid;">
+  <mat-toolbar>    <span class="toolbar-spacer"></span> <button class="bn-button-fa"  *ngIf="fs" mat-icon-button (click)="fullscreen.minimize();fs=false">
+ <i class="fas fa-window-minimize"></i>
+</button>
+
+<button class="bn-button-fa"   *ngIf="!fs" mat-icon-button (click)="fullscreen.maximize();fs=true"
+>
+    <i class="fas fa-window-maximize"></i>
+</button></mat-toolbar>
+<div style="padding:20px">
+    FULLSCREEN Content
+</div>
+
+</div>

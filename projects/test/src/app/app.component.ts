@@ -26,6 +26,7 @@ export class AppComponent {
   }
 
   data = [
+
     {
       title: 'pipes',
       data: ['debounce','highlight','safe-html','search-filter','set-default','sort-by','truncate','wordcount']
@@ -48,7 +49,7 @@ export class AppComponent {
     },
     {
       title: 'selection',
-      data: ['selection-and-caret-svc', 'copy-to-clipboard-svc']
+      data: ['selection-and-caret-svc']
     },
     {
       title: 'screen',
@@ -65,7 +66,16 @@ export class AppComponent {
    
     {
       title: 'interfaces',
-      data: ['']
+      data: ['bn-el-size','bn-error','bn-key-value','bn-label-value']
+    },
+
+    {
+      title: 'router',
+      data: ['router-and-title-svc', 'router-reuse-svc']
+    },
+    {
+      title: 'assets-and-styles',
+      data: ['core.scss']
     },
   ]
 

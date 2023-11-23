@@ -47,3 +47,16 @@ html, body {
     display: inline-flex;
     vertical-align: top;
 }
+
+.bn-fullscreen {
+    width: 100vw !important;
+    height: 100vh !important;
+    position: fixed !important;
+    z-index: 9999999999!important;
+    top: 64px;
+    left: 0;
+    overflow: auto;
+    overscroll-behavior: none;
+  }
+
+ 
