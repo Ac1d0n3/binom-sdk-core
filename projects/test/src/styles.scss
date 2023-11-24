@@ -4,5 +4,6 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 
-@import './styles/core.scss';
+@import '../../../dist/binom/sdk-core/assets/core.css';
 @import './styles/material-icons.scss';
+

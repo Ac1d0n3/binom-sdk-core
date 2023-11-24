@@ -1,6 +1,7 @@
 {
   "name": "@binom/sdk-core",
   "version": "1.0.1",
+  "schematics": "./schematics/collection.json",
   "peerDependencies": {
     "@angular/common": "^17.0.0",
     "@angular/core": "^17.0.0",
@@ -9,5 +10,9 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "build:sass": "sass styles/core.scss assets/core.css",
+    "build:schematics": "tsc -p tsconfig.schematics.json"
+ }
 }
