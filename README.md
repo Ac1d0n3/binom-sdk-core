@@ -7,18 +7,18 @@
     / /_/ // // / / // /_/ // / / / / /   ___/ // /_/ // /| |  
    /_____//_//_/ /_/ \____//_/ /_/ /_/   /____//_____//_/ |_| 
 
-
-
-   CORE V1.0.4
-   Author: Thomas Lindackers 
-
-   BINOM.net
-
-   Nov 2023
-
-   github-repo with test App:  
-   https://github.com/Ac1d0n3/binom-sdk-core                                                     
 ---------------------------------------------------------------------------------
+
+** CORE V1.0.4
+Author: Thomas Lindackers 
+
+BINOM.net
+
+Nov 2023
+
+github-repo with test App:  
+https://github.com/Ac1d0n3/binom-sdk-core      **                                               
+
 
 includes:
 
