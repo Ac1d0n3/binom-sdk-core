@@ -8,8 +8,7 @@ BINOM.net
 
 Nov 2023
 
-github-repo with test App:  
-https://github.com/Ac1d0n3/binom-sdk-core      **   
+npm i @binom/sdk-core  
                        
 ---------------------------------------------------------------------------------
 
