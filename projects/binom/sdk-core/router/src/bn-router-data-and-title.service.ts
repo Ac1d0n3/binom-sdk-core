@@ -7,19 +7,24 @@ import { Meta, Title } from '@angular/platform-browser';
 import { BnRouterInfo } from './bn-router-info.model';
 import { BnRouterData } from './bn-router-data.model';
 
-import { BnLoggerService, BnLogSource } from "@binom/sdk-core/logger";
+import { BnLoggerService, BnLogMsg, BnLogSource } from "@binom/sdk-core/logger";
 
 @Injectable({
   providedIn: 'root'
 })
 export class BnRouterDataAndTitleService {
 
-
-  protected logSource: BnLogSource = {
+  private logSource: BnLogSource = {
     module: 'BnRouterDataAndTitleService',
     source: 'svc'
   };
 
+  private __logMsg(type:any, msg:BnLogMsg){
+    if(this.logger.doLog(this.logSource,type)){
+      let formatMsg:any = this.logger.formatMsg(msg,this.logSource,type)
+      console.log(formatMsg.msg,formatMsg.color);
+    }
+  }
 
   public appTitle:string = '';
   public spacer:string = ' | ';
@@ -99,7 +104,7 @@ export class BnRouterDataAndTitleService {
         });
         if(this.breadcrumbs[this.breadcrumbs.length-1]){
           if(this.breadcrumbs[this.breadcrumbs.length-1].data.metaTags){
-            //console.log(this.breadcrumbs[this.breadcrumbs.length-1].data.metaTags)
+            this.__logMsg('debug',{function:'combineLatest', msg: this.breadcrumbs[this.breadcrumbs.length-1].data.metaTags})
             this.meta.addTags(this.breadcrumbs[this.breadcrumbs.length-1].data.metaTags)
           }
   
@@ -154,19 +159,19 @@ export class BnRouterDataAndTitleService {
       values.fragmentChange = this.fragmentChange;
       this.currentData = values;
 
-      //this.logger.debug(this.logSource, { function: 'CUR ROUTER DATA', msg: JSON.stringify(this.currentData) });
-      
+      this.__logMsg('debug',{ function: 'CUR ROUTER DATA', msg: JSON.stringify(this.currentData)});
+
       this.routerData.next(values);
       this.firstLoad = false
     }
   }
 
   private reuseParamChange(values:any, routeChacheIndex:number, changedParams:any[]){
+    this.__logMsg('debug', { function: 'reuseParamChange', msg: routeChacheIndex.toString() });
 
-    //this.logger.debug(this.logSource, { function: 'reuseParamChange', msg: routeChacheIndex.toString() });
     if(values.current){
       if(values.current.reuse && routeChacheIndex !== -1 && values.routeChange){
-        //this.logger.debug(this.logSource, { function: 'reuseParamChange', msg: 'REUSE ROUTE' });
+        this.__logMsg('debug', { function: 'reuseParamChange', msg: 'REUSE ROUTE' });
         if(JSON.stringify(values.routerParams) === JSON.stringify(this.routeChache[routeChacheIndex].params) ){
           changedParams = [];
         }
@@ -232,8 +237,8 @@ export class BnRouterDataAndTitleService {
   }
 
   private routeChacheValues(route:string, parent:string){
-   // this.logger.debug(this.logSource, { function: 'reuseParamChange', msg:'Route is ' + route + ' parent is ' + parent});
-   
+
+    this.__logMsg('debug',{ function: 'reuseParamChange', msg:'Route is ' + route + ' parent is ' + parent});
     let data = this.breadcrumbs[this.breadcrumbs.length-1].data
     let reuse = data.reuse
     if(reuse){
@@ -373,8 +378,9 @@ export class BnRouterDataAndTitleService {
   }
 
   private buildBreadCrumb(route: ActivatedRoute, url: string = '', breadcrumbs: BnRouterData[] = []): BnRouterData[] {
-   //this.logger.debug(this.logSource, { function: 'buildBreadCrumb', msg:'Route is ' + route + ' url is ' + url});
-   
+
+    this.__logMsg('debug',{ function: 'buildBreadCrumb', msg:'Route is ' + route + ' url is ' + url});
+ 
     let rdata = route.routeConfig && route.routeConfig.data ? route.routeConfig.data : '';
 
     let path = route.routeConfig ? route.routeConfig.path : '';

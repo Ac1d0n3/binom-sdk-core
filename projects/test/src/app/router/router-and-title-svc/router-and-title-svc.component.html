@@ -1,1 +1,39 @@
 <h1>BnRouterAndTitleService</h1>
+
+
+<pre>
+    <code>
+        this.routerSvc.routerData$.subscribe( (data: any))...
+    </code>
+</pre>
+
+<h2>Methods</h2>
+<ul>
+    <li>updateRouteChacheParams(route:string, parent:string, index:number)</li>
+    <li>getRouterParams()</li>
+    <li>setAppTitle(title:string)</li>
+    <li>setFragment(fragment:string, push:boolean=false)</li>
+    <li>navigate(path:string, merge:boolean=false)</li>
+    <li>getRoutes(): string[]</li>
+    <li>getFragmentPartById(itemId:string)</li>
+    <li>updateFragmentById(itemId:string, value:string)</li>
+    <li>setRouterParams(values:any, fragment:string = 'null', force:boolean = true)</li>
+    <li>checkParamChange(checkParams:string[])</li>
+</ul>
+
+<h2>Data</h2>
+<p>{{routerData}}
+</p>
+
+<h2>
+    Need in Route:
+</h2>
+<pre>
+    <code>
+       
+        data: &#x7B;
+            breadcrumb: 'breadcrumb.translateTag'
+            &#x7D;
+    </code>
+</pre>
+   

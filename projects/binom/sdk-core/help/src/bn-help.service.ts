@@ -21,13 +21,11 @@ export class BnHelpService {
 
   setValues(values:any){
     this.helpInfo = values;
-
     this.helpInfo$.next(this.helpInfo)
   }
 
   public getSettingsFromLocal() {
     let getSettings = localStorage.getItem('bnHelpSettings');
-    //console.log(getSettings )
     if(getSettings){
         this.helpInfo = JSON.parse(getSettings);
         this.helpInfo$.next(this.helpInfo)

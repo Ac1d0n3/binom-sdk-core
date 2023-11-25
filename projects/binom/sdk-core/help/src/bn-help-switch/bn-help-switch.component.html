@@ -27,7 +27,7 @@
         </div>
 
         <div class="bn-menu-row regular-border">
-            <mat-checkbox  aria-label="save help settings" [(ngModel)]="helpInfo.saveSettings" (change)="changeHelp()">
+            <mat-checkbox name="save" ngDefaultControl aria-label="save help settings" [(ngModel)]="helpInfo.saveSettings" (change)="changeHelp()">
               {{'help.saveSettings' | translate }}</mat-checkbox> 
         </div>
 

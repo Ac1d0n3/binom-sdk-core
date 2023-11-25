@@ -64,6 +64,11 @@ export const routes: Routes = [
     },
 
     {
+        path: 'ngx-translate-helper/custom-mat-paginator-intl',
+        loadComponent:  () => import('./translate//custom-mat-pagi/custom-mat-pagi.component').then(m => m.CustomMatPagiComponent)
+    },
+
+    {
         path: 'utils/renderer',
         loadComponent:  () => import('./utils/renderer/renderer.component').then(m => m.RendererComponent)
     },
@@ -121,12 +126,45 @@ export const routes: Routes = [
     },
 
     {
+        path: 'router-param-filter/router-param-filter-menu',
+        loadComponent:  () => import('./router-param-filter/router-param-f/router-param-f.component').then(m => m.RouterParamFComponent)
+    },
+
+    {
+        path: 'router-param-filter/router-param-filter-svc',
+        loadComponent:  () => import('./router-param-filter/router-param-filter-svc/router-param-filter-svc.component').then(m => m.RouterParamFilterSvcComponent)
+    },
+
+    {
         path: 'router/router-and-title-svc',
+        data: {
+            breadcrumb: 'breadcrumb.routerdemo'
+          },
         loadComponent:  () => import('./router/router-and-title-svc/router-and-title-svc.component').then(m => m.RouterAndTitleSvcComponent)
     },
     {
         path: 'router/router-reuse',
         loadComponent:  () => import('./router/router-reuse-svc/router-reuse-svc.component').then(m => m.RouterReuseSvcComponent)
+    },
+
+    {
+        path: 'help/help-svc',
+        loadComponent:  () => import('./help/bn-help-svc/bn-help-svc.component').then(m => m.BnHelpSvcComponent)
+    },
+
+
+    {
+        path: 'help/help-switch',
+        loadComponent:  () => import('./help/bn-help-demo/bn-help-demo.component').then(m => m.BnHelpDemoComponent)
+    },
+
+    {
+        path: 'assets-and-styles/core-scss',
+        loadComponent:  () => import('./other/style-ex/style-ex.component').then(m => m.StyleExComponent)
+    },
+    {
+        path: 'assets-and-styles/i18n',
+        loadComponent:  () => import('./other/i18n-ex/i18n-ex.component').then(m => m.I18nExComponent)
     },
   ];
   

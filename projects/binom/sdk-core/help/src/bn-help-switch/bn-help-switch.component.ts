@@ -4,14 +4,16 @@ import { BnHelpService } from '../bn-help.service';
 import { Subscription } from "rxjs";
 import { CommonModule } from '@angular/common';
 import { MatSlideToggleModule} from '@angular/material/slide-toggle';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 @Component({
   selector: 'bn-help-switch',
   templateUrl: './bn-help-switch.component.html',
   standalone: true,
-  imports: [CommonModule, MatSlideToggleModule, FormsModule, TranslateModule]
+  imports: [CommonModule, MatSlideToggleModule, FormsModule, TranslateModule, ReactiveFormsModule, MatButtonModule, MatCheckboxModule ]
 })
 export class BnHelpSwitchComponent implements OnInit, OnDestroy {
 

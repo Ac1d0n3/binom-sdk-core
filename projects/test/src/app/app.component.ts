@@ -80,11 +80,11 @@ export class AppComponent {
 
     {
       title: 'help',
-      data: ['help-svc', 'help-switch','help-switch-menu']
+      data: ['help-svc', 'help-switch']
     },
     {
       title: 'assets-and-styles',
-      data: ['core.scss', 'i18n']
+      data: ['core-scss', 'i18n']
     },
   ]
 

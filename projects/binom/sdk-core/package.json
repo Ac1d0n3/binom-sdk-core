@@ -1,7 +1,42 @@
 {
   "name": "@binom/sdk-core",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "description": "Core Lib for projects",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ac1d0n3/binom-sdk-core"
+  },
+  "bugs": {
+    "url": "https://github.com/Ac1d0n3/binom-sdk-core/issues"
+  },
+  "homepage": "https://github.com/Ac1d0n3/binom-sdk-core",
   "schematics": "./schematics/collection.json",
+  "ng-update": {
+    "migrations": "./schematics/migrations.json"
+  },
+  "scripts": {
+    "build:sass": "sass styles/core.scss assets/core.css",
+    "build:schematics": "tsc -p tsconfig.schematics.json",
+    "postbuild:schematics": "copyfiles schematics/migrations.json schematics/collection.json ../../../dist/binom/sdk-core/"
+  },
+  "exports": {
+    "./styles": {
+      "default": "./styles/core.scss"
+    }
+  },
+  "keywords": [
+    "binom",
+    "sdk",
+    "material",
+    "ngx-translate",
+    "angular",
+    "library"
+  ],
+  "author": "Thomas Lindackers (binom)",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "@angular/common": "^17.0.0",
     "@angular/core": "^17.0.0",
@@ -10,9 +45,11 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false,
-  "scripts": {
-    "build:sass": "sass styles/core.scss assets/core.css",
-    "build:schematics": "tsc -p tsconfig.schematics.json"
- }
+  "ng-add": {
+    "save": "dependencies"
+  },
+  "devDependencies": {
+    "copyfiles": "file:../../node_modules/copyfiles",
+    "typescript": "file:../../node_modules/typescript"
+  }
 }

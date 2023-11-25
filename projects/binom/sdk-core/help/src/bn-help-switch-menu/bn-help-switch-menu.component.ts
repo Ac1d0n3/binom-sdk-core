@@ -6,11 +6,12 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { BnHelpSwitchComponent } from '../bn-help-switch/bn-help-switch.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'bn-help-switch-menu',
   templateUrl: './bn-help-switch-menu.component.html',
   standalone:true,
-  imports: [CommonModule, MatMenuModule, FormsModule, TranslateModule, BnHelpSwitchComponent, MatTooltipModule]
+  imports: [CommonModule, MatMenuModule, FormsModule, TranslateModule, BnHelpSwitchComponent, MatTooltipModule, MatButtonModule]
 })
 export class BnHelpSwitchMenuComponent {
   private  _enableToolTips:boolean = false;

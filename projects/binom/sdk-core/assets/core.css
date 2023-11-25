@@ -45,9 +45,41 @@ html, body {
 
 .bn-mat-icon-fix {
   display: inline-flex;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 
+.bn-menu-row {
+  display: grid;
+  grid-template-columns: 200px 45px;
+  margin-left: 5px;
+}
 
+.bn-menu-row {
+  display: grid;
+  grid-template-columns: 200px 45px;
+  margin-left: 5px;
+}
+
+.bn-menu-row-switch {
+  display: grid;
+  grid-template-columns: 100px 100px 45px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+.bn-menu-row-switch-label {
+  display: grid;
+  grid-template-columns: 50px 140px 45px;
+  height: 45px;
+  margin-left: 15px;
+}
+
+.bn-menu-row-switch-fix {
+  margin-top: 8px;
+}
+
+.bn-menu-row-label {
+  padding-top: 10px;
+}
 
 /*# sourceMappingURL=core.css.map */
