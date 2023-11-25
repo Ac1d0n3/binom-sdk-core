@@ -6,7 +6,7 @@ export function ngAdd(): Rule {
   return (tree: Tree, context: SchematicContext) => {
     context.logger.log('info', `✅️ Running Schematics`);
     context.addTask(new NodePackageInstallTask());
-    //tree.create('hello.txt', 'world');
+    tree.create('hello.txt', 'world');
     return tree;
   };
 }

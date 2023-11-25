@@ -45,7 +45,7 @@ html, body {
 
 .bn-mat-icon-fix {
   display: inline-flex;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 

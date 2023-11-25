@@ -1,6 +1,6 @@
 {
   "name": "@binom/sdk-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "schematics": "./schematics/collection.json",
   "peerDependencies": {
     "@angular/common": "^17.0.0",
