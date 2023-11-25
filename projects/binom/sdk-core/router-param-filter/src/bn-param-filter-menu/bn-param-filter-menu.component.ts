@@ -14,7 +14,7 @@ import { BnParamFilterService } from '../bn-param-filter.service';
   standalone: true,
   imports: [CommonModule,MatMenuModule,MatButtonModule,MatBadgeModule,MatTooltipModule, TranslateModule],
   templateUrl: './bn-param-filter-menu.component.html',
-  styleUrl: './bn-param-filter-menu.component.css'
+  styleUrl: './bn-param-filter-menu.component.css',
 })
 export class BnParamFilterMenuComponent implements OnInit, OnDestroy {
   private sub!: Subscription;

@@ -7,13 +7,17 @@
     / /_/ // // / / // /_/ // / / / / /   ___/ // /_/ // /| |  
    /_____//_//_/ /_/ \____//_/ /_/ /_/   /____//_____//_/ |_| 
 
-   CORE V1.0.1
+
+
+   CORE V1.0.4
    Author: Thomas Lindackers 
 
    BINOM.net
 
    Nov 2023
-   github-repo with test App:                                                       
+
+   github-repo with test App:  
+   https://github.com/Ac1d0n3/binom-sdk-core                                                     
 ---------------------------------------------------------------------------------
 
 includes:
@@ -32,6 +36,7 @@ includes:
 - Translate Switch
 - Translate Switch Menu
 - DateAdapter to transform datePicker / date and number
+- CustomMatPaginatorIntl
 
 ## data-loader
 - JSON GET Service
@@ -39,6 +44,11 @@ includes:
 
 ## logger 
 - console log Handler Helper Service
+
+## help
+- BnHelpService
+- BnHelpSwitch
+- BnHelpSwitchMenu
 
 ## utils
 - renderer Class add's renderer function to elRef
@@ -52,7 +62,6 @@ includes:
 - fullscreen directive to make an element fullscreen
 
 ## selection
-- CopyToClipboard SVC
 - SelectionAnsCaretSVC to get editable selection
 
 ## interfaces
@@ -62,5 +71,8 @@ includes:
 - BnLabelValue
 
 ## assests
+- core.css
+- core.css.map
 
 ## styles
+- core.scss

@@ -33,7 +33,7 @@ export class AppComponent {
     },
     {
       title: 'ngx-translate-helper',
-      data: ['translate-switch','date-and-numper-pipe']
+      data: ['translate-switch', 'date-and-numper-pipe', 'custom-mat-paginator-intl']
     },
     {
       title: 'icons',
@@ -74,8 +74,17 @@ export class AppComponent {
       data: ['router-and-title-svc', 'router-reuse-svc']
     },
     {
+      title: 'router-param-filter',
+      data: ['router-param-filter-svc', 'router-param-filter-menu']
+    },
+
+    {
+      title: 'help',
+      data: ['help-svc', 'help-switch','help-switch-menu']
+    },
+    {
       title: 'assets-and-styles',
-      data: ['core.scss']
+      data: ['core.scss', 'i18n']
     },
   ]
 
