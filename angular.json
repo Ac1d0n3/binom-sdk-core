@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/binom/sdk-core",
       "sourceRoot": "projects/binom/sdk-core/src",
-      "prefix": "lib",
+      "prefix": "bn",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
