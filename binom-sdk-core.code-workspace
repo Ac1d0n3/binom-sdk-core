@@ -4,16 +4,7 @@
 			"path": "."
 		},
 		{
-			"path": "../binom-sdk-layout"
-		},
-		{
 			"path": "../binom-sdk-theme"
-		},
-		{
-			"path": "../binom-sdk-user"
-		},
-		{
-			"path": "../binom-sdk-privacy"
 		}
 	],
 	"settings": {}

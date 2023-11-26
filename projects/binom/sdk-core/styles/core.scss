@@ -68,7 +68,7 @@ html, body {
 
 .bn-menu-row-switch-label{
     display: grid;
-    grid-template-columns: 50px 140px 45px;
+    grid-template-columns: 50px 160px 45px;
     height: 45px;
     margin-left: 15px
 }
@@ -81,6 +81,20 @@ html, body {
     padding-top: 10px;
 }
 
+.bn-menu-fromto-wrapper{
+    display: grid;
+    grid-template-columns: 80px 80px;
+    height: 56px;
+    margin-left: 25px;
+    
+}
+
+
+
+
+.bn-menu-group-wrapper{
+    position: relative;
+}
 
 .bnl-center-xy{
     margin: auto auto;

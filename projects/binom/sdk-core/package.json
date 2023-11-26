@@ -1,6 +1,6 @@
 {
   "name": "@binom/sdk-core",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Core Lib for projects",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   "bugs": {
     "url": "https://github.com/Ac1d0n3/binom-sdk-core/issues"
   },
-  "homepage": "https://github.com/Ac1d0n3/binom-sdk-core",
+  "homepage": "https://binom.net",
   "schematics": "./schematics/collection.json",
   "ng-update": {
     "migrations": "./schematics/migrations.json"
