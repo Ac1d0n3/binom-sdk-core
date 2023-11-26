@@ -56,11 +56,28 @@ includes:
 ## selection
 - SelectionAnsCaretSVC to get editable selection
 
+## select-icon-trigger
+- makes Mat-Select Trigger on Icon
+
+## info
+- bn-suffix-info add Menu to Button Suffix
+
 ## interfaces
 - BnError
 - BnElSize
 - BnKeyValue
 - BnLabelValue
+
+## router
+- BnRouterDataAndTitleService
+- BnRouterReuseService
+
+## router-param-filter
+- BnParamFilterService
+- BnParamFilterMenu
+
+
+
 
 ## assests
 - core.css

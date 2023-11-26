@@ -1,0 +1,30 @@
+<div class="selectIconTriggerWrapper" *ngIf="data.length > 0">
+    <button mat-icon-button style="z-index:30" class="bn-button-fa"
+    [matBadge]="currentSelected.length" [matBadgeColor]="badgecolor"
+    [matBadgeSize]="badgesize" 
+    mat-icon-button [matBadgeHidden]='badgeHidden'
+    [matBadgePosition]='badgePosition' [matBadgeHidden]="!showBadge" [disabled]="disabled"
+    matTooltip="{{ bnTooltip | translate}}" (click)="select.open()"
+    [matTooltipDisabled]="!enableToolTips">
+  
+    <i *ngIf="iconType!=='mat'" [class]="iconType +' '+ icon +' fa-fw '+ (iconSetClass !=='' ? iconSetClass : 'bn-button-fa')"></i>
+    <span *ngIf="iconType==='mat'" [class]="'material-icons-'+iconArt +' '+iconSetClass">{{icon}}</span>
+    
+    </button>
+    <mat-select #select class="selectIconTrigger" [(ngModel)]="currentSelected"
+    (selectionChange)="onSelectChange($event.value)" [multiple]="multiple" >
+      <div cdkDropList (cdkDropListDropped)="drop($event)" >
+        <mat-option class="bnSortOption" (click)="$event.stopPropagation();"
+        *ngFor="let val of data"
+        [value]="val[valueName]"
+        cdkDrag cdkDragPreviewClass="selectIconTriggerHide"
+        [cdkDragDisabled]="!sortable" >
+          {{translateTag + val[displayName] | translate}}
+          <button *ngIf="sortable" mat-icon-button class="sortbutton" cdkDragHandle >
+            <i class="fas fa-sort bn-button-fa" style="line-height: 1;"></i></button>
+        </mat-option>
+      </div>
+ 
+    </mat-select>
+   
+  </div>

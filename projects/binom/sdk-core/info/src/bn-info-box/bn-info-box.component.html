@@ -1,0 +1,10 @@
+<div class="bnl-center-xy {{cardClass}}" bnAos="fadeIn">
+    <mat-card class="mat-elevation-z8 bn-info-card regular-padding bnl-center-xy">
+        <span [class]="warn? 'warn-color':'accent-color'" style="font-size:50px;margin-bottom:10px"><i class="fas {{icon}}"></i></span>
+        <h2 [class]="warn? 'warn-color':'accent-color'" style="margin-bottom:10px">{{ translateKey | translate }}</h2>
+        <span *ngIf="translateKeySub!==''" style="margin-bottom:10px">{{ translateKeySub | translate }}</span>
+        <ng-content></ng-content>
+        <button *ngIf="showButtonA" mat-button (click)="onButtonAClick()">{{ buttonTranslateKeyA | translate }}</button>
+        <button *ngIf="showButtonB" mat-button (click)="onButtonBClick()">{{ buttonTranslateKeyB | translate }}</button>
+    </mat-card>
+  </div>
