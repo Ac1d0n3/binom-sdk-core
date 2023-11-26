@@ -9,6 +9,7 @@ BINOM.net
 Nov 2023
 
 npm i @binom/sdk-core  
+git:  https://github.com/Ac1d0n3/binom-sdk-core   
                        
 ---------------------------------------------------------------------------------
 
@@ -77,18 +78,17 @@ includes:
 - BnParamFilterMenu
 
 
-
-
 ## assests
 - core.css
 - core.css.map
 
 ## styles
 - core.scss
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.2.
 
 ## Development server
 
 cd projects/test
 Run `ng serve ` for a demo app. 
 
+## Notes
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.2.
