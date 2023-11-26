@@ -6,7 +6,7 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'bn-bn-info-box',
+  selector: 'bn-info-box',
   standalone: true,
   imports: [CommonModule, MatCardModule, TranslateModule ],
   templateUrl: './bn-info-box.component.html',
@@ -16,7 +16,7 @@ export class BnInfoBoxComponent {
   @Input() icon: string = 'fa-exclamation';
   @Input() translateKey: string = 'bnInfo.notFound';
   @Input() translateKeySub: string = '';
-  @Input() cardClass: string = 'centerCardSmall';
+  @Input() cardClass: string = 'info-card-small';
 
   private  _warn:boolean = false;
   get warn(): boolean{ return this._warn; }

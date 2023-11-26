@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, Input, HostBinding } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input, HostBinding, ViewEncapsulation } from '@angular/core';
 import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
@@ -12,7 +12,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   selector: 'bn-select-icon-trigger',
   templateUrl: './bn-select-icon-trigger.component.html',
   standalone:true,
-  imports: [CommonModule, MatSelectModule, MatButtonModule, MatTooltipModule,TranslateModule, MatBadgeModule, FormsModule, ReactiveFormsModule,DragDropModule ]
+  styleUrl: './bn-select-icon-trigger.component.css',
+  imports: [CommonModule, MatSelectModule, MatButtonModule, MatTooltipModule,TranslateModule, MatBadgeModule, FormsModule, ReactiveFormsModule,DragDropModule ],
+  encapsulation: ViewEncapsulation.None,
 })
 export class BnSelectIconTriggerComponent implements OnInit {
   @HostBinding('class.button-component-fix') addClass: boolean = true;

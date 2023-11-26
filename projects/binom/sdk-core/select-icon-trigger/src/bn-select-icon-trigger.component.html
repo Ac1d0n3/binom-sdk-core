@@ -1,4 +1,4 @@
-<div class="selectIconTriggerWrapper" *ngIf="data.length > 0">
+<div class="select-icon-trigger-wrapper" *ngIf="data.length > 0">
     <button mat-icon-button style="z-index:30" class="bn-button-fa"
     [matBadge]="currentSelected.length" [matBadgeColor]="badgecolor"
     [matBadgeSize]="badgesize" 
@@ -11,13 +11,13 @@
     <span *ngIf="iconType==='mat'" [class]="'material-icons-'+iconArt +' '+iconSetClass">{{icon}}</span>
     
     </button>
-    <mat-select #select class="selectIconTrigger" [(ngModel)]="currentSelected"
+    <mat-select #select class="select-icon-trigger" [(ngModel)]="currentSelected"
     (selectionChange)="onSelectChange($event.value)" [multiple]="multiple" >
       <div cdkDropList (cdkDropListDropped)="drop($event)" >
-        <mat-option class="bnSortOption" (click)="$event.stopPropagation();"
+        <mat-option class="bn-sort-option" (click)="$event.stopPropagation();"
         *ngFor="let val of data"
         [value]="val[valueName]"
-        cdkDrag cdkDragPreviewClass="selectIconTriggerHide"
+        cdkDrag cdkDragPreviewClass="select-icon-trigger-drag-preview"
         [cdkDragDisabled]="!sortable" >
           {{translateTag + val[displayName] | translate}}
           <button *ngIf="sortable" mat-icon-button class="sortbutton" cdkDragHandle >

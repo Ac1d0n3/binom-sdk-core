@@ -1,11 +1,11 @@
 
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, HostBinding, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
-  selector: 'bn-bn-suffix-info',
+  selector: 'bn-suffix-info',
   standalone: true,
   imports: [CommonModule, MatMenuModule, TranslateModule, MatButtonModule],
   templateUrl: './bn-suffix-info.component.html',
@@ -22,9 +22,5 @@ export class BnSuffixInfoComponent {
   @Input() infoData:any = [];
 
   constructor(private translate: TranslateService) { }
-
-  ngOnInit(): void {
-   
-  }
 
 }

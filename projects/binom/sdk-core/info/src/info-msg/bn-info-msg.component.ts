@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslateModule } from '@ngx-translate/core';
 @Component({
-  selector: 'bn-bn-info-msg',
+  selector: 'bn-info-msg',
   standalone: true,
   imports: [CommonModule, MatTooltipModule,TranslateModule],
   templateUrl: './bn-info-msg.component.html',

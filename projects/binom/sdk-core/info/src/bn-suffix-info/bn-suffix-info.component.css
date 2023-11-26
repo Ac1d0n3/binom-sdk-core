@@ -1,0 +1,8 @@
+
+.info-panel{
+    padding:0px 10px;
+    color: var(--mdc-filled-text-field-input-text-color);
+}
+.info-item{
+    margin-top: 5px;
+}

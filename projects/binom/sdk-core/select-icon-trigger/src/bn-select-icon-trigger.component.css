@@ -1,0 +1,37 @@
+.select-icon-trigger-wrapper{
+    position: relative;
+}
+
+.select-icon-trigger-wrapper .mat-mdc-select-arrow,
+.select-icon-trigger-wrapper .mat-mdc-select-value
+{
+   display: none !important;
+   z-index: -10 !important;
+   width: fit-content
+ 
+ }
+
+.select-icon-trigger-wrapper .mat-badge-content {
+    margin-top: 5px;
+    margin-left: -2px;
+}
+
+.select-icon-trigger-drag-preview{
+    width:fit-content;
+    transform: scale(0.3) translate(-200px, -100px);
+}
+
+
+.select-icon-trigger {
+    min-width:200px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 100%
+}
+
+bn-select-icontrigger  .mat-select-panel-wrap{
+    position: relative !important;
+ }
+ 
+ 

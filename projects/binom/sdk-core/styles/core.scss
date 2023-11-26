@@ -91,3 +91,14 @@ html, body {
 .bnl-center-y{
     margin: auto 0;
 }
+
+.mdc-menu-surface.mat-mdc-select-panel,.cdk-overlay-panel {
+    width: -moz-fit-content!important;
+    width: fit-content!important
+}
+
+
+/*TODO(mdc-migration): The following rule targets internal classes of select that may no longer apply for the MDC version.*/
+
+
+

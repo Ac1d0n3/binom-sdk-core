@@ -166,6 +166,27 @@ export const routes: Routes = [
         path: 'assets-and-styles/i18n',
         loadComponent:  () => import('./other/i18n-ex/i18n-ex.component').then(m => m.I18nExComponent)
     },
+
+    {
+        path: 'info/suffix-info',
+        loadComponent:  () => import('./info/suffix-info/suffix-info.component').then(m => m.SuffixInfoComponent)
+    },
+
+    {
+        path: 'info/info-box',
+        loadComponent:  () => import('./info/info-box/info-box.component').then(m => m.InfoBoxComponent)
+    },
+
+
+    {
+        path: 'info/info-msg',
+        loadComponent:  () => import('./info/info-msg/info-msg.component').then(m => m.InfoMsgComponent)
+    },
+
+    {
+        path: 'select-icon-trigger/select-icon-trigger',
+        loadComponent:  () => import('./select-icon-trigger/select-icon-trigger.component').then(m => m.SelectIconTriggerComponent)
+    },
   ];
   
  

@@ -86,6 +86,16 @@ export class AppComponent {
       title: 'assets-and-styles',
       data: ['core-scss', 'i18n']
     },
+
+    {
+      title: 'info',
+      data: ['suffix-info', 'info-box', 'info-msg']
+    },
+
+    {
+      title: 'select-icon-trigger',
+      data: ['select-icon-trigger']
+    },
   ]
 
  
