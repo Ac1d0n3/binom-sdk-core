@@ -1,0 +1,17 @@
+{
+    "bnInfo":{
+        "notFound": "nicht gefunden"
+    },
+    "tooltips":{
+        "language": "Choose language",
+        "help":"Hilfe"
+        
+    },
+    "help":{
+        "help": "Hilfe",
+        "tooltips": "Tooltips",
+        "tooltipsCols": "Spalten Tooltips",
+        "tooltipsDescr": "abgekürtze Beschreibungen",
+        "saveSettings": "Speichern"
+    }
+}

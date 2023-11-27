@@ -5,6 +5,18 @@
 		},
 		{
 			"path": "../binom-sdk-theme"
+		},
+		{
+			"path": "../binom-sdk-animation"
+		},
+		{
+			"path": "../binom-sdk-layout"
+		},
+		{
+			"path": "../binom-sdk-privacy"
+		},
+		{
+			"path": "../binom-sdk-user"
 		}
 	],
 	"settings": {}

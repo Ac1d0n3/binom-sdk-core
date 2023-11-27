@@ -29,83 +29,52 @@ html, body {
     display: table;
 }
 
-.toolbar-spacer{
-    flex: 1 1 auto;
-}
-
+.toolbar-spacer{ flex: 1 1 auto; }
 .font-fa, .bn-button-fa{
     font-size: 17px !important;
     width:24px;
     line-height: 24px;
 }
 
-.bn-fa{ font-size: 17px !important;
-}
-
+.bn-fa{ font-size: 17px !important; }
 .bn-mat-icon-fix{
     display: inline-flex;
     vertical-align: baseline;
 }
-
 .bn-menu-row{
     display: grid;
     grid-template-columns: 200px 45px;
     margin-left: 5px
 }
-
 .bn-menu-row{
     display: grid;
     grid-template-columns: 200px 45px;
     margin-left: 5px
 }
-
 .bn-menu-row-switch{
     display: grid;
     grid-template-columns: 100px 100px 45px;
     height: 40px;
     margin-left: 5px
 }
-
 .bn-menu-row-switch-label{
     display: grid;
     grid-template-columns: 50px 160px 45px;
     height: 45px;
     margin-left: 15px
 }
-
-.bn-menu-row-switch-fix{
-    margin-top:8px
-}
-
-.bn-menu-row-label{
-    padding-top: 10px;
-}
-
+.bn-menu-row-switch-fix{ margin-top:8px }
+.bn-menu-row-label{ padding-top: 10px; }
 .bn-menu-fromto-wrapper{
     display: grid;
     grid-template-columns: 80px 80px;
     height: 56px;
-    margin-left: 25px;
-    
+    margin-left: 25px; 
 }
-
-
-
-
-.bn-menu-group-wrapper{
-    position: relative;
-}
-
-.bnl-center-xy{
-    margin: auto auto;
-}
-.bnl-center-x{
-    margin: 0 auto;
-}
-.bnl-center-y{
-    margin: auto 0;
-}
-
+.bn-menu-group-wrapper{ position: relative; }
+.bnl-center-xy{  margin: auto auto; }
+.bnl-center-x{ margin: 0 auto; }
+.bnl-center-y{ margin: auto 0; }
 .mdc-menu-surface.mat-mdc-select-panel,.cdk-overlay-panel {
     width: -moz-fit-content!important;
     width: fit-content!important

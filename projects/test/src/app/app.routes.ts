@@ -187,6 +187,11 @@ export const routes: Routes = [
         path: 'select-icon-trigger/select-icon-trigger',
         loadComponent:  () => import('./select-icon-trigger/select-icon-trigger.component').then(m => m.SelectIconTriggerComponent)
     },
+
+    {
+        path: 'value-accessor/content-editable',
+        loadComponent:  () => import('./val-access-content/val-access-content.component').then(m => m.ValAccessContentComponent)
+    },
   ];
   
  

@@ -96,6 +96,11 @@ export class AppComponent {
       title: 'select-icon-trigger',
       data: ['select-icon-trigger']
     },
+
+    {
+      title: 'value-accessor',
+      data: ['content-editable']
+    },
   ]
 
  

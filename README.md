@@ -1,15 +1,14 @@
 
 # @binom/sdk-core
 ---------------------------------------------------------------------------------
-** CORE V1.0.4
+** CORE V1.0.6
 Author: Thomas Lindackers 
 
 BINOM.net
 
 Nov 2023
 
-npm i @binom/sdk-core  
-git:  https://github.com/Ac1d0n3/binom-sdk-core   
+npm i @binom/sdk-core   
                        
 ---------------------------------------------------------------------------------
 
@@ -56,6 +55,9 @@ includes:
 
 ## selection
 - SelectionAnsCaretSVC to get editable selection
+
+## value-accessor
+- to access content-editable 
 
 ## select-icon-trigger
 - makes Mat-Select Trigger on Icon
