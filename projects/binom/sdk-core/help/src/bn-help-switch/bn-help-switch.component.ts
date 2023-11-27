@@ -12,6 +12,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 @Component({
   selector: 'bn-help-switch',
   templateUrl: './bn-help-switch.component.html',
+  styleUrl: './bn-help-switch.component.css',
   standalone: true,
   imports: [CommonModule, MatSlideToggleModule, FormsModule, TranslateModule, ReactiveFormsModule, MatButtonModule, MatCheckboxModule ]
 })
