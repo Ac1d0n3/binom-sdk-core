@@ -1,7 +1,6 @@
-
 # @binom/sdk-core
 ---------------------------------------------------------------------------------
-** CORE V1.0.6
+** CORE V1.0.7
 Author: Thomas Lindackers 
 
 BINOM.net
@@ -9,10 +8,12 @@ BINOM.net
 Nov 2023
 
 npm i @binom/sdk-core   
-                       
+
 ---------------------------------------------------------------------------------
 
-includes:
+## NEW / Updates
+add global project assests to core and material icons scss to styles
+
 
 ## Pipes 
 - Debounce

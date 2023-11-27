@@ -63,9 +63,10 @@
               "projects/test/src/assets",
               {
                 "glob": "**/*",
-                "input": "./dist/binom/sdk-core/assets",
-                "output": "./assets/sdk-core"
+                "input": "dist/binom/sdk-core/assets",
+                "output": "assets"
               }
+             
             ],
             "styles": [
               "@angular/material/prebuilt-themes/purple-green.css",
