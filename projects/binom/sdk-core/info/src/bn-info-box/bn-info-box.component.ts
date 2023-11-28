@@ -4,11 +4,12 @@ import { MatCardModule } from '@angular/material/card'
 import { TranslateModule } from '@ngx-translate/core';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'bn-info-box',
   standalone: true,
-  imports: [CommonModule, MatCardModule, TranslateModule ],
+  imports: [CommonModule, MatCardModule, TranslateModule, MatButtonModule ],
   templateUrl: './bn-info-box.component.html',
   styleUrl: './bn-info-box.component.css'
 })

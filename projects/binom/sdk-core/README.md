@@ -1,6 +1,6 @@
 # @binom/sdk-core
 ---------------------------------------------------------------------------------
-** CORE V1.0.8
+** CORE V1.0.9
 Author: Thomas Lindackers 
 
 BINOM.net
@@ -12,8 +12,11 @@ npm i @binom/sdk-core
 ---------------------------------------------------------------------------------
 
 ## NEW / Updates
-add global project assests to core and material icons scss to styles
+1.0.8 
+fix missing MatButton in info / font colors in some components
 
+1.0.7 add global project assests to core and material icons scss to styles
+include the mainfonts to load them local due too german 3rd Party restrictions
 
 ## Pipes 
 - Debounce
