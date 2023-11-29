@@ -1,6 +1,6 @@
 # @binom/sdk-core
 ---------------------------------------------------------------------------------
-** CORE V1.0.9
+** CORE V1.1.0
 Author: Thomas Lindackers 
 
 BINOM.net
@@ -12,7 +12,10 @@ npm i @binom/sdk-core
 ---------------------------------------------------------------------------------
 
 ## NEW / Updates
-1.0.8 
+1.1.0 
+add form-error / progress-content
+
+1.0.9 
 fix missing MatButton in info / font colors in some components
 
 1.0.7 add global project assests to core and material icons scss to styles

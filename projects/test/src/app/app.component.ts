@@ -101,6 +101,16 @@ export class AppComponent {
       title: 'value-accessor',
       data: ['content-editable']
     },
+
+    {
+      title: 'form-error',
+      data: ['form-error']
+    },
+
+    {
+      title: 'progress-content',
+      data: ['progress-content']
+    },
   ]
 
  

@@ -192,6 +192,16 @@ export const routes: Routes = [
         path: 'value-accessor/content-editable',
         loadComponent:  () => import('./val-access-content/val-access-content.component').then(m => m.ValAccessContentComponent)
     },
+
+    {
+        path: 'progress-content/progress-content',
+        loadComponent:  () => import('./content-progress/content-progress.component').then(m => m.ContentProgressComponent)
+    },
+
+    {
+        path: 'form-error/form-error',
+        loadComponent:  () => import('./form-error/form-error.component').then(m => m.FormErrorComponent)
+    },
   ];
   
  

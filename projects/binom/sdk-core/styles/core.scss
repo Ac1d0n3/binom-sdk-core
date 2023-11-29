@@ -80,6 +80,33 @@ html, body {
     width: fit-content!important
 }
 
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+}
+
+@keyframes fadeInOpacity {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.fade-out {
+	opacity: 1;
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-duration: 0.5s;
+}
+
+@keyframes fadeInOpacity {
+	0% { opacity:1; }
+	100% { opacity: 0; }
+}
+
+
 
 /*TODO(mdc-migration): The following rule targets internal classes of select that may no longer apply for the MDC version.*/
 

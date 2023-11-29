@@ -1,0 +1,8 @@
+.bn-content-loader{
+    width:fit-content;
+    display: block;
+    overflow:hidden;
+    z-index: 200;
+    text-align: center;
+    margin: 0 auto;
+  }
