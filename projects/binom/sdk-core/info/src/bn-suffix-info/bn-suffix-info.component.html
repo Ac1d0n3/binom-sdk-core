@@ -1,6 +1,6 @@
 <button type="button" mat-icon-button class="bn-button-fa" [matMenuTriggerFor]="menu">
   @if(iconType==='mat'){
-    <span *ngIf="" [class]="'material-icons-'+iconArt +' '+iconSetClass">{{icon}}</span>
+    <span [class]="'material-icons-'+iconArt +' '+iconSetClass">{{icon}}</span>
   } @else {
     <i [class]="iconType +' '+ icon +' fa-fw '+ (iconSetClass !=='' ? iconSetClass : 'bn-button-fa')"></i>
   }

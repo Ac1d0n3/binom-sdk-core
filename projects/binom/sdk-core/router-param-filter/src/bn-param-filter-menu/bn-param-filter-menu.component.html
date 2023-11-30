@@ -1,4 +1,4 @@
-<ng-container *ngIf="curFilters.length>0">
+@if(curFilters.length>0){
     <button [matTooltipDisabled]="!enableToolTips"
     matTooltip="{{translateTag+'tooltips.clearFilter' | translate}}"
     mat-icon-button [matMenuTriggerFor]="filtersMenue"
@@ -10,13 +10,15 @@
     </button>
 
     <mat-menu #filtersMenue="matMenu" color="accent">
-        <ng-container *ngFor="let filter of curFilters; let i = index">
+        @for(filter of curFilters;track $index){
             <button (click)="clearFilter(filter.clear)" mat-menu-item>
                 <i [class]="filter.icon ?  filter.icon +' bn-button-fa':  'fa fa-times fa-fw bn-button-fa'" aria-hidden="true"></i> {{translateTag+filter.label | translate}}
             </button>
-        </ng-container>
-        <button *ngIf="curFilters.length > 1" (click)="clearAll()" mat-menu-item>
-            <i class="fa fa-times fa-fw bn-button-fa" aria-hidden="true"></i> {{translateTag+'clearAll' | translate}}
-        </button>
+        }
+        @if(curFilters.length > 1){
+            <button (click)="clearAll()" mat-menu-item>
+                <i class="fa fa-times fa-fw bn-button-fa" aria-hidden="true"></i> {{translateTag+'clearAll' | translate}}
+            </button>
+        }
     </mat-menu>
-</ng-container>
+}
