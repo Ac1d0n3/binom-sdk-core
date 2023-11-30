@@ -1,7 +1,6 @@
 
 <div class="bn-menu-group bn-help-switch">
-    <ng-container *ngIf="isInit">
-        
+    @if(isInit){
         <div class="bn-menu-row-switch-label regular-border">
             <mat-slide-toggle class="bn-menu-row-switch-fix" [(ngModel)]="helpInfo.tooltips" (change)="changeHelp()"> </mat-slide-toggle> 
             <div class="bn-menu-row-label">{{'help.tooltips' | translate }}</div>
@@ -30,7 +29,6 @@
             <mat-checkbox name="save" ngDefaultControl aria-label="save help settings" [(ngModel)]="helpInfo.saveSettings" (change)="changeHelp()">
               {{'help.saveSettings' | translate }}</mat-checkbox> 
         </div>
-
-    </ng-container>
+    }
 
 </div>

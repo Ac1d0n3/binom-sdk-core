@@ -6,7 +6,8 @@
     [matBadgePosition]='badgePosition' [matBadgeHidden]="!showBadge" [disabled]="disabled"
     matTooltip="{{ bnTooltip | translate}}" (click)="select.open()"
     [matTooltipDisabled]="!enableToolTips">
-  
+
+    
     <i *ngIf="iconType!=='mat'" [class]="iconType +' '+ icon +' fa-fw '+ (iconSetClass !=='' ? iconSetClass : 'bn-button-fa')"></i>
     <span *ngIf="iconType==='mat'" [class]="'material-icons-'+iconArt +' '+iconSetClass">{{icon}}</span>
     

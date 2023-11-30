@@ -1,13 +1,19 @@
-<ng-container *ngFor="let info of infos;">
-    <span class="bn-filter-info"
-    [class.color-primary]='info.color=="primary"'
-    [class.color-accent]='info.color=="accent"'
-    [class.color-warn]='info.color=="warn"'
-    [class.bnHeaderInfoNext]="info.next"  matTooltip="{{translateTag + 'tooltips.' + info.toolTip | translate}}"
-    [matTooltipDisabled]="!enableToolTips">
-      <i *ngIf="(info.icon !== '' && info.icon)" [class]="info.icon"></i>
-      <span *ngIf="info.start" >{{translateTag + info.start | translate}} </span>
-      {{info.middle}}
-      <span *ngIf="info.end" >{{translateTag + info.end | translate}} </span>
-    </span>
-  </ng-container>
+@for( info of infos; track $index){
+  <span class="bn-filter-info"
+  [class.color-primary]='info.color=="primary"'
+  [class.color-accent]='info.color=="accent"'
+  [class.color-warn]='info.color=="warn"'
+  [class.bnHeaderInfoNext]="info.next"  matTooltip="{{translateTag + 'tooltips.' + info.toolTip | translate}}"
+  [matTooltipDisabled]="!enableToolTips">
+    @if(info.icon !== '' && info.icon){
+      <i [class]="info.icon"></i>
+    }
+    @if(info.start){
+      <span >{{translateTag + info.start | translate}} </span>
+    }
+    {{info.middle}}
+    @if(info.end){
+      <span >{{translateTag + info.end | translate}} </span>
+    }
+  </span>
+}

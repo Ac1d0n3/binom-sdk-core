@@ -1,14 +1,16 @@
-<button type="button" mat-icon-button class="bn-button-fa" 
-[matMenuTriggerFor]="menu">
-
-<i *ngIf="iconType!=='mat'" [class]="iconType +' '+ icon +' fa-fw '+ (iconSetClass !=='' ? iconSetClass : 'bn-button-fa')"></i>
-<span *ngIf="iconType==='mat'" [class]="'material-icons-'+iconArt +' '+iconSetClass">{{icon}}</span>
-
+<button type="button" mat-icon-button class="bn-button-fa" [matMenuTriggerFor]="menu">
+  @if(iconType==='mat'){
+    <span *ngIf="" [class]="'material-icons-'+iconArt +' '+iconSetClass">{{icon}}</span>
+  } @else {
+    <i [class]="iconType +' '+ icon +' fa-fw '+ (iconSetClass !=='' ? iconSetClass : 'bn-button-fa')"></i>
+  }
 </button>
 <mat-menu #menu="matMenu" class="info-box" [xPosition]="xPosition">
   <div class="info-panel theme-textcolor">
     <div class="info-item" *ngFor="let info of infoData">
-      <i *ngIf="info.prefixIconClass !== ''" [class]="(info.prefixIconClass !== '' ? info.prefixIconClass:'') + ' fa-fw'"> </i>
+      @if(info.prefixIconClass !== ''){
+        <i [class]="(info.prefixIconClass !== '' ? info.prefixIconClass:'') + ' fa-fw'"> </i>
+      }
       <span>{{ info.start | translate}} {{ info.middle }} {{ info.end | translate}}</span>
     </div>
   </div>
