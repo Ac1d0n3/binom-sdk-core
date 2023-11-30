@@ -20,6 +20,15 @@
 		},
 		{
 			"path": "../binom-sdk-layout"
+		},
+		{
+			"path": "../binom-sdk-picker"
+		},
+		{
+			"path": "../binom-sdk-prism"
+		},
+		{
+			"path": "../binom-sdk-tags-and-ratings"
 		}
 	],
 	"settings": {}
