@@ -1,4 +1,4 @@
 <span *ngIf="type != 'notsecure' || inputLength >= min"> {{ message! | translate }}</span>
-<span *ngIf="type != 'message'"> {{ message! | translate }}</span>
+<span *ngIf="type == 'message'"> {{ message! | translate }}</span>
 <span *ngIf="type == 'minlength'">{{min}} {{'charslong' | translate}} </span>
 <span *ngIf="type == 'maxlength'">{{max}} {{'charslong' | translate}} </span>

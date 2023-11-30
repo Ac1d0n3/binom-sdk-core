@@ -1,6 +1,6 @@
 # @binom/sdk-core
 ---------------------------------------------------------------------------------
-** CORE V1.1.0
+** CORE V1.1.1
 Author: Thomas Lindackers 
 
 BINOM.net
@@ -12,7 +12,7 @@ npm i @binom/sdk-core
 ---------------------------------------------------------------------------------
 
 ## NEW / Updates
-1.1.0 
+1.1.0 / 1.1.1 add fix for form-error 
 add form-error / progress-content
 
 1.0.9 
