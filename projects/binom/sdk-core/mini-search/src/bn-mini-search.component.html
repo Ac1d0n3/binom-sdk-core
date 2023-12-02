@@ -1,0 +1,24 @@
+<div class="bn-mini-search-wrapper">
+    <mat-form-field [color]="color" class="bn-mini-search">
+      <mat-label >{{searchLabel | translate}}</mat-label>
+      <input [(ngModel)]="searchText" #search matInput type="text" autocomplete="off">
+    </mat-form-field>
+  <div class="bn-mini-search-options">
+    @if(searchFields.length > 0){
+      <bn-select-icon-trigger
+      bnTooltip="{{translateTag+'bnMiniSearch.changeSearchField'| translate}}"
+      [enableToolTips]="enableToolTips"
+      [badgeHidden]="true"
+      color=""
+      [data]="searchFields"
+      [sortable]="false"
+      [multiple]="false"
+      [currentSelected]="currentSelected"
+      iconType="mat" iconArt="outlined"
+      icon="settings_applications"
+      (selectedValues)="selectedValues($event)">
+      </bn-select-icon-trigger>
+    }
+  </div>
+</div>
+  

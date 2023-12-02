@@ -202,6 +202,16 @@ export const routes: Routes = [
         path: 'form-error/form-error',
         loadComponent:  () => import('./form-error/form-error.component').then(m => m.FormErrorComponent)
     },
+
+    {
+        path: 'search/mini-search',
+        loadComponent:  () => import('./demo-mini-search/demo-mini-search.component').then(m => m.DemoMiniSearchComponent)
+    },
+    {
+        path: 'search/search-box',
+        loadComponent:  () => import('./search-box/search-box.component').then(m => m.SearchBoxComponent)
+    },
+
   ];
   
  

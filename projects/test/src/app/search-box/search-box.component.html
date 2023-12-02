@@ -1,0 +1,12 @@
+<bn-search-box [searchFields]="searchfields"
+[currentSelected]="currentSearchFields"
+showInfo setParams useParams setClearFilter></bn-search-box>
+
+<bn-search-box showInfo [infoData]="infoData"></bn-search-box>
+
+<bn-search-box useParams setParams
+[searchFields]="searchfields"
+[currentSelected]="currentSearchFields"
+[infoData]="infoData" setClearFilter></bn-search-box>
+<br>
+<bn-param-filter-menu></bn-param-filter-menu>

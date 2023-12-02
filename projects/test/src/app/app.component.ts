@@ -63,7 +63,10 @@ export class AppComponent {
       title: 'hover',
       data: ['hover-class']
     },
-   
+    {
+      title: 'search',
+      data: ['mini-search','search-box']
+    },
     {
       title: 'interfaces',
       data: ['bn-el-size','bn-error','bn-key-value','bn-label-value']

@@ -1,0 +1,83 @@
+.bn-search .mdc-text-field--filled,
+.bn-search * :not(.mat-mdc-icon-button),
+.bn-mini-search .mdc-text-field--filled,
+.bn-mini-search * :not(.mat-mdc-icon-button)
+{
+  background: transparent !important;
+  background: transparent !important;;
+}
+
+
+
+.bn-search-wrapper, .bn-mini-search-wrapper{
+    position: relative;
+    width:fit-content;
+    overflow:hidden
+}
+
+.bn-mini-search-wrapper{
+  height:40px;
+  width :100%
+}
+
+.bn-search-wrapper{
+  height:50px;
+  width: 100%;
+  max-width:150px;
+}
+
+.bn-search{
+   margin-top: -8px; 
+   width:100%
+}
+
+.bn-mini-search{
+  margin-top: -22px !important; 
+  width :100% ;
+
+}
+
+.bn-mini-search .mdc-text-field{
+  background-color: transparent !important;
+}
+
+.bn-search-options{
+  position: absolute;
+  top:0px;
+  right:0px;
+  z-index:10;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.bn-mini-search-options{
+  position: absolute;
+  top:-5px;
+  right:0px;
+  z-index:10;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.bn-search-button{
+  position: relative;
+
+}
+
+.bn-search-filter .mat-badge-content, .bn-mini-search .mat-badge-content, bn-filter-menu .mat-badge-content{
+    top: 10px !important;
+    right:0px !important
+  }
+
+
+  @media (min-width: 900px){
+
+    .bn-search-filter .mat-badge-content, .bn-mini-search .mat-badge-content, bn-filter-menu .mat-badge-content{
+      top: 3px !important;
+      right:0px !important
+    }
+    .bn-search-wrapper{
+      height:50px;
+      max-width:none;
+    }
+  }

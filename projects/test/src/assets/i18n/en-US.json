@@ -13,6 +13,11 @@
         "tooltipsCols": "Column tooltips",
         "tooltipsDescr": "shorten descriptions",
         "saveSettings": "save"
-    }
+    },
+    "bnSearchbox":{
+        "searchFields":"Change field to search in",
+        "clear": "Clear search",
+        "searchHelp": "Show help"
+      }
    
 }

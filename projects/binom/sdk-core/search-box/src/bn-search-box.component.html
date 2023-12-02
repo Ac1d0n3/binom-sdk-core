@@ -1,0 +1,47 @@
+<div class="bn-search-wrapper">
+  <mat-form-field class="bn-search"  [color]="color" >
+    <mat-label >{{searchLabel | translate}}</mat-label>
+    @if(infoData.length > 0 && showInfo){
+      <bn-suffix-info xPosition="after" class="bn-search-info"  
+      matTooltip="{{translateTag+'bnSearchbox.searchHelp'| translate}}"
+      [matTooltipDisabled]="!enableToolTips"
+      icon="far fa-question-circle" [infoData]="infoData" matPrefix></bn-suffix-info>
+    }
+   
+    @if(searchFields.length > 1){
+      <button mat-icon-button disabled matSuffix  ></button>
+    }
+   
+    <button mat-icon-button disabled matSuffix></button>
+    <input [disabled]="disabled" [(ngModel)]="searchText" #search matInput type="text" autocomplete="off">
+
+  </mat-form-field>
+
+  <div class="bn-search-options">
+    <button class="bn-button-fa" mat-icon-button (click)="clearSearch()"  matTooltip="{{(translateTag+'bnMiniSearch.'+(searchText != ''? 'clear': '')) | translate}}"
+    [matTooltipDisabled]="!enableToolTips">
+      <i [class]="' fas '+ (searchText ? 'fa-times' : 'fa-search')"></i>
+    </button>
+
+    @if(searchFields.length > 1){
+      <bn-select-icon-trigger class="bn-search-filter"  matTooltip="{{translateTag+'bnSearchbox.searchFields'| translate}}"
+      [matTooltipDisabled]="!enableToolTips"
+      (selectedValues)="searchFieldsChange($event)"
+      [showBadge]="showBadge"
+      [disabled]="disabled"
+      badgePosition="above"
+      multiple
+      [badgecolor]="badgecolor"
+      [alwaysOneSelected]="true"
+      [currentSelected]="currentSelected"
+      [data]="searchFields"
+      [sortable]="false"
+      iconType="mat"
+      iconArt="outlined"
+      icon="settings_applications">
+    </bn-select-icon-trigger>
+    }
+   
+  </div>
+</div>
+    
