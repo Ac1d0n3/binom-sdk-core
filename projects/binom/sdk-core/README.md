@@ -1,6 +1,6 @@
 # @binom/sdk-core
 ---------------------------------------------------------------------------------
-** CORE V1.1.2
+** CORE V1.1.4
 Author: Thomas Lindackers 
 
 BINOM.net
@@ -12,6 +12,8 @@ npm i @binom/sdk-core
 ---------------------------------------------------------------------------------
 
 ## NEW / Updates
+1.1.4 add JSON Loader to export
+1.1.3 add BnColor Interface type ColorUtils
 1.1.2 replace *ngIf / *ngFor to @if / @for
 
 1.1.0 / 1.1.1 add fix for form-error 

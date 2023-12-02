@@ -29,6 +29,33 @@
 		},
 		{
 			"path": "../binom-sdk-tags-and-ratings"
+		},
+		{
+			"path": "../binom-sdk-image"
+		},
+		{
+			"path": "../binom-sdk-calendar"
+		},
+		{
+			"path": "../binom-sdk-location"
+		},
+		{
+			"path": "../binom-sdks-and-settings"
+		},
+		{
+			"path": "../binom-ui-nav"
+		},
+		{
+			"path": "../binom-ui-advertise"
+		},
+		{
+			"path": "../binom-ui-content"
+		},
+		{
+			"path": "../binom-ui-charts"
+		},
+		{
+			"path": "../binom-ui-business"
 		}
 	],
 	"settings": {}

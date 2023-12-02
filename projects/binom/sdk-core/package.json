@@ -1,6 +1,6 @@
 {
   "name": "@binom/sdk-core",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "Core Lib for projects",
   "repository": {
     "type": "git",

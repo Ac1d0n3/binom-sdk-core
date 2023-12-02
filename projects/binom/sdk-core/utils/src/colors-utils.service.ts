@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BnColor } from './bn-color';
 
 @Injectable({
   providedIn: 'root'
@@ -7,12 +8,12 @@ export class BnColorsUtilsService {
 
   constructor() { }
 
-  channelToHex(c:number) {
+  channelToHex(c:number):string {
     var hex = c.toString(16);
     return hex.length == 1 ? "0" + hex : hex;
   }
 
-  rgbToHex(r:number, g:number, b:number) {
+  rgbToHex(r:number, g:number, b:number):string {
     return "#" + this.channelToHex(r) + this.channelToHex(g) + this.channelToHex(b);
   }
 
@@ -46,7 +47,7 @@ export class BnColorsUtilsService {
 
   }
 
-  hue2rgbChannel(p:number, q:number, t:number){
+  hue2rgbChannel(p:number, q:number, t:number):number{
       if(t < 0) t += 1;
       if(t > 1) t -= 1;
       if(t < 1/6) return p + (q - p) * 6 * t;
@@ -55,7 +56,7 @@ export class BnColorsUtilsService {
       return p;
   }
 
-  hslToRgb(h:number, s:number, l:number){
+  hslToRgb(h:number, s:number, l:number):number[]{
       var r, g, b;
 
       if(s == 0){
@@ -70,13 +71,13 @@ export class BnColorsUtilsService {
       return [(r * 255), (g * 255),( b * 255)];
   }
 
-  hexToRgb(hex:string) {
+  hexToRgb(hex:string):number[]|null {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? [parseInt(result[1], 16),parseInt(result[2], 16),parseInt(result[3], 16)]
      : null;
   }
 
-  setOutput(mode:string,values:any){
+  setOutput(mode:string,values:BnColor):string {
     if(values){
       if(mode === 'rgba' && values.rgba){
         values.output = 'rgba(' + values.rgba[0] + ',' + values.rgba[1] + ',' + values.rgba[2]+ ',' + values.rgba[3] + ')'
@@ -93,12 +94,12 @@ export class BnColorsUtilsService {
       if(mode === 'hex' && values.hex){
         values.output = values.hex
       }
-      return values
-    } else return null
+      return values.output ? values.output: ''
+    } else return ''
 
   }
 
-  allValsFromRgb(r:number,g:number,b:number,a:number=1,mode:string='rgba'){
+  allValsFromRgb(r:number,g:number,b:number,a:number=1,mode:string='rgba'):BnColor|null{
     let values = {
       rgba: [r,g,b,a],
       hsla: this.rgbToHsl(r,g,b).concat(a),
@@ -106,13 +107,11 @@ export class BnColorsUtilsService {
       use: 'rgba(' + r + ',' + g + ',' + b + ','+ a +')',
       output: ''
     }
-    values.output = values.use;
-    values = this.setOutput(mode,values)
-    //console.log(values)
+    values.output = this.setOutput(mode,values)
     return values
   }
 
-  allValuesFromHex(hexVal:string, a:number=1, mode:string='rgba'){
+  allValuesFromHex(hexVal:string, a:number=1, mode:string='rgba'):BnColor|null{
     if(hexVal){
       let rgb = this.hexToRgb(hexVal);
       if(rgb)
@@ -121,7 +120,7 @@ export class BnColorsUtilsService {
     } else return null
   }
 
-  allValuesFromHsl(h:number,s:number,l:number, a:number=1, mode:string='rgba'){
+  allValuesFromHsl(h:number,s:number,l:number, a:number=1, mode:string='rgba'):BnColor|null{
     let rgb = this.hslToRgb(h,s,l);
     if(rgb)
       return this.allValsFromRgb(rgb[0],rgb[1],rgb[2],a,mode);
@@ -129,7 +128,7 @@ export class BnColorsUtilsService {
   }
 
 
-  getValuesFromValueString(valueStr:string){
+  getValuesFromValueString(valueStr:string):BnColor|null {
     var matchColors1 = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
     var match1 = matchColors1.exec(valueStr);
     
