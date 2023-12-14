@@ -1,6 +1,6 @@
 # @binom/sdk-core
 ---------------------------------------------------------------------------------
-** CORE V1.1.5
+** CORE V1.1.6
 Author: Thomas Lindackers 
 
 BINOM.net
@@ -12,6 +12,7 @@ npm i @binom/sdk-core
 ---------------------------------------------------------------------------------
 
 ## NEW / Updates
+1.1.6 add more CSS / change LogService ColorSchema
 1.1.5 add bnSearchBox and MiniSearch 
 1.1.4 add JSON Loader to export
 1.1.3 add BnColor Interface type ColorUtils
